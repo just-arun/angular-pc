@@ -1,0 +1,35 @@
+<span class="pie-chart">
+  <canvas id="pie_chart">
+  </canvas>
+  <div class="card">
+      <div class="list" *ngFor="let item of newData; let i = index" style="display: flex;align-items: center;">
+        <span
+        class="placeholder-col"
+        [style.background-color]="colorArray[i]">
+          <span>{{item.value}}</span>
+        </span>
+        <span>{{item.name}}</span>
+        <!-- val: {{item.value}} -->
+      </div>
+  </div>
+</span>
+<button (click)="initFun()">refresh</button>
+
+{{ title }}
+
+<div>
+  {{donut}}
+  newData: 
+  <div *ngFor="let item of newData; let i = index" style="display: flex;align-items: center;">
+    <span style="background: #000; margin: 2px; border-radius: 5px; overflow: hidden;">
+        <span
+        style="font-size: 12px; height: 30px; width: 30px; display: inline-block;display: flex;align-items: center;justify-content: center;color: #fff;"
+        [style.background-color]="colorArray[i]">
+          <span>{{item.value}}%</span>
+        </span>
+    </span>
+    <span style="margin: 5px">{{item.name}}</span>
+    <!-- val: {{item.value}} -->
+  </div>
+</div>
+{{colorArray}}

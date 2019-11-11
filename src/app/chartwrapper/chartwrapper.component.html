@@ -1,0 +1,19 @@
+<p>
+  chartwrapper works! {{title}}
+  <app-peichart
+  [(title)]="title"
+  [newData]="newData"
+  [radious]="radious"
+  [startAngle]="startAngle"
+  [endAngle]="endAngle"
+  [(donut)]="donut"
+  ></app-peichart>
+</p>
+<div>
+  <label for="donut">
+    <input (change)="donutToggle()" id="donut" type="checkbox">
+    donut
+  </label>
+  {{donut}}
+</div>
+

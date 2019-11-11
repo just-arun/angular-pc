@@ -1,0 +1,45 @@
+.pie-chart {
+    position: relative;
+    display: block;
+    height: 300px;
+    width: 300px;
+    canvas {
+        position: relative;
+        background: #eee;
+        border-radius: 4px;
+        box-shadow: 0 0 6px 0 grey;
+        // border-radius: 50%;
+    }
+    .card {
+        position: absolute;
+        box-shadow:0 0 2px 0 #000;
+        top: 0px;
+        height: auto;
+        // width: 100px;
+        background: #fff;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        padding: 10px;
+        border-radius: 5px;
+        .list {
+            margin: 5px;
+            display: flex;
+            justify-content: space-around;
+            span:nth-child(even) {
+                margin-left: 4px;
+            }
+            .placeholder-col {
+                display: flex;
+                height: 17px;
+                width: 17px;
+                font-size: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                border-radius: 3px;
+            }
+        }
+    }
+}
